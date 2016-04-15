@@ -1,7 +1,6 @@
 ﻿module.exports = (app) => {
-    //GET: api/
-    app.get("/api", (req, res) => {
-        res.json({ message: "API is working" });
+    app.get("*", (req, res) => {
+        res.redirect("/");
     });
 
     // POST: api/calc

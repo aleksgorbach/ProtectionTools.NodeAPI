@@ -1,7 +1,6 @@
 module.exports = function (app) {
-    //GET: api/
-    app.get("/api", function (req, res) {
-        res.json({ message: "API is working" });
+    app.get("*", function (req, res) {
+        res.redirect("/");
     });
     // POST: api/calc
     app.post("/api/calc", function (req, res) {

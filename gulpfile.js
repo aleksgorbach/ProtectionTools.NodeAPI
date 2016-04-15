@@ -18,7 +18,7 @@ gulp.task("js:concat", function() {
         "wwwroot/scripts/controllers/appController.js"
     ])
         //.pipe(concat("app.js"))
-        .pipe(gulp.dest("public/js/"));
+        .pipe(gulp.dest("wwwroot/public/js/"));
 });
 
 gulp.task("css:concat", function() {

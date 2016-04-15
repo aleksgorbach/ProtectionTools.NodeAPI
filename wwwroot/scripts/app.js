@@ -3,12 +3,12 @@
         .config([
             "$routeProvider", function($routeProvider) {
                 $routeProvider
-                    .when("/app", {
+                    .when("/", {
                         templateUrl: "/views/appView.html",
                         controller: "AppController"
                     })
                     .otherwise({
-                            redirectTo: "/app"
+                            redirectTo: "/"
                         }
                     );
             }

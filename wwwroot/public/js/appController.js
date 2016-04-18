@@ -4,7 +4,7 @@
         
             $scope.calc = function() {
                 electricity.calc($scope.model).then(function(data) {
-                    $scope.model = data;
+                    $scope.model.Amperage = data;
                 });
             }
 

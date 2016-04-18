@@ -1,4 +1,4 @@
-/// <binding BeforeBuild='css' />
+/// <binding BeforeBuild='css, js:concat' />
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require("gulp-cssmin"),

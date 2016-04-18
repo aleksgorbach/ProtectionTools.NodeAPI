@@ -36,6 +36,8 @@
   <ItemGroup>
     <Content Include="wwwroot\styles\site.css" />
     <TypeScriptCompile Include="Scripts\app\config\routes.ts" />
+    <TypeScriptCompile Include="Scripts\app\db\mongoose.ts" />
+    <TypeScriptCompile Include="Scripts\app\models\bus.ts" />
     <TypeScriptCompile Include="Scripts\typings\express\express.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
     <TypeScriptCompile Include="server.ts" />
@@ -306,9 +308,10 @@
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Db\" />
     <Folder Include="Scripts\app\" />
     <Folder Include="Scripts\app\config\" />
+    <Folder Include="Scripts\app\models\" />
+    <Folder Include="Scripts\app\db\" />
     <Folder Include="wwwroot\scripts\" />
     <Folder Include="lib\" />
     <Folder Include="lib\angular-messages\" />

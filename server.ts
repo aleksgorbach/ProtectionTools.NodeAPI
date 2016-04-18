@@ -1,5 +1,6 @@
 ﻿///<reference path="Scripts/typings/express/express.d.ts"/>
 ///<reference path="Scripts/app/config/routes.ts"/>
+import routes = require("./Scripts/app/config/routes");
 
 class App {
     constructor(port: number) {
@@ -10,7 +11,8 @@ class App {
         var app = express();
         app.use(bodyParser.json());
         app.use(express.static(path.join(__dirname, "wwwroot/public")));
-        require("./Scripts/app/config/routes.ts")(app);
+        var router = new routes.Router(app);
+        router.route();
 
         var usedPort = process.env.port || port;
         app.listen(port, () => {

@@ -1,6 +1,9 @@
-﻿///<reference path="Scripts/typings/express/express.d.ts"/>
-///<reference path="Scripts/app/config/routes.ts"/>
-import routes = require("./Scripts/app/config/routes");
+﻿///<reference path="typings/express/express.d.ts"/>
+/// <reference path="typings/mongoose/mongoose.d.ts" />
+
+import { Mongoose } from "./src/server/db/mongoose";
+import { Router } from './src/server/config/routes';
+import { Config } from "./src/server/config/config"
 
 class App {
     constructor(port: number) {
@@ -10,17 +13,18 @@ class App {
 
         var app = express();
         app.use(bodyParser.json());
-        app.use(express.static(path.join(__dirname, "wwwroot/public")));
-        var router = new routes.Router(app);
+        app.use(express.static(path.join(__dirname, "src/client")));
+        var router = new Router(app);
         router.route();
+        new Mongoose();
 
-        var usedPort = process.env.port || port;
         app.listen(port, () => {
-            console.log(`server is running http://localhost:${usedPort}`);
+            console.log(`server is running http://localhost:${port}`);
         });
     }
 }
 
-var app = new App(1337);
+var config = new Config();
+var app = new App(config.get("port"));
 
 

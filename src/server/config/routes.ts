@@ -8,15 +8,14 @@ export class Router {
     }
 
     route() {
-        this.app.get("*", (req, res) => {
-            res.redirect("/");
-        });
-
         // POST: api/calc
         this.app.post("/api/calc", (req, res) => {
             var model = req.body;
             var bus = new busModel.Bus(model.NominalVoltage, model.PowerCoef, model.Elements);
             res.end(JSON.stringify(bus.amperage));
+        });
+        this.app.get("*", (req, res) => {
+            res.redirect("/");
         });
     }
 }

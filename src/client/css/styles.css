@@ -17466,10 +17466,6 @@ input[type="checkbox"]:disabled:checked:after,
   src: url("../fonts/Ubuntu-R.ttf") format("truetype");
 }
 
-@font-face {
-  font-family: Ubuntu-R;
-}
-
 body {
   background-color: #fff;
   font-family: Ubuntu-R;

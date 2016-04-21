@@ -253,5 +253,4 @@ paket-files/
 
 .vs/
 lib/
-Scripts/typings
 *.map

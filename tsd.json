@@ -2,7 +2,7 @@
   "version": "v4",
   "repo": "borisyankov/DefinitelyTyped",
   "ref": "master",
-  "path": "Scripts/typings",
+  "path": "typings",
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "node/node.d.ts": {
@@ -21,6 +21,9 @@
       "commit": "0e139d5d4681b71d53a30408efcc64b79eed6354"
     },
     "mongoose/mongoose.d.ts": {
+      "commit": "544a35a10866b32afda9c7f029c0764558563f4f"
+    },
+    "linq/linq.d.ts": {
       "commit": "544a35a10866b32afda9c7f029c0764558563f4f"
     }
   }

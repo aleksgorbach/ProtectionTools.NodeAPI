@@ -1,5 +1,4 @@
 "use strict";
-var engine = require("./engines/EngineModel");
 var Bus = (function () {
     function Bus(voltage, powerCoef, elements) {
         var coef = elements.length <= 10 ? 1.1 : 1;
@@ -9,9 +8,6 @@ var Bus = (function () {
         }, 0);
         var totalPower = Math.sqrt(activePower * activePower + reactivePower * reactivePower);
         this.amp = totalPower / (Math.sqrt(3) * voltage);
-        engine.find({}, function (err, data) {
-            console.log(data);
-        });
     }
     Object.defineProperty(Bus.prototype, "amperage", {
         get: function () {

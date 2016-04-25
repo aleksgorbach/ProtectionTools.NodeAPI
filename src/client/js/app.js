@@ -1,16 +1,18 @@
-(function () {
-    angular.module("electricityApp", ["ngRoute", "ngMessages"])
-        .config([
-            "$routeProvider", function($routeProvider) {
-                $routeProvider
-                    .when("/", {
-                        templateUrl: "/views/appView.html",
-                        controller: "AppController"
-                    })
-                    .otherwise({
-                            redirectTo: "/"
-                        }
-                    );
-            }
-        ]);
-}());
+var app = angular.module("ElectricityApp", ["ngRoute", "ngMessages"]);
+app.config([
+    "$routeProvider", function ($routeProvider) {
+        $routeProvider
+            .when("/", {
+            templateUrl: "/views/calcView.html",
+            controller: "CalcController"
+        })
+            .when("/engines", {
+            templateUrl: "views/manage/manageEnginesView.html",
+            controller: "EngineController"
+        })
+            .otherwise({
+            redirectTo: "/"
+        });
+    }
+]);
+

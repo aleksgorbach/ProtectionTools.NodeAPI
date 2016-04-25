@@ -5,7 +5,7 @@ import {IEngineModel} from "./IEngine";
 
 var engineSchema = new mongoose.Schema({
     title: String,
-    ipin: Number,
+    IpIn: Number,
     power: Number
 });
 

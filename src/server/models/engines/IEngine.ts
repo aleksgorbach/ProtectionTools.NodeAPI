@@ -2,9 +2,9 @@
 import mongoose = require('mongoose');
 
 export interface IEngine {
-    Title: string;
+    title: string;
     IpIn: number;
-    Power: number;
+    power: number;
 }
 
 export interface IEngineModel extends IEngine, mongoose.Document {

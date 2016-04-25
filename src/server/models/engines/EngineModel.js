@@ -2,7 +2,7 @@
 var mongoose = require('mongoose');
 var engineSchema = new mongoose.Schema({
     title: String,
-    ipin: Number,
+    IpIn: Number,
     power: Number
 });
 var engine = mongoose.model("Engine", engineSchema);

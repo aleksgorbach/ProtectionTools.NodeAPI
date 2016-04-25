@@ -12,9 +12,6 @@ export class Bus {
         }, 0);
         var totalPower = Math.sqrt(activePower * activePower + reactivePower * reactivePower);
         this.amp = totalPower / (Math.sqrt(3) * voltage);
-        engine.find({}, function(err, data){
-            console.log(data);
-        })
     }
 
     get amperage(): number {

@@ -1,9 +1,9 @@
-﻿///<reference path="typings/express/express.d.ts"/>
-/// <reference path="typings/mongoose/mongoose.d.ts" />
+﻿///<reference path="../../typings/express/express.d.ts"/>
+/// <reference path="../../typings/mongoose/mongoose.d.ts" />
 
-import { Mongoose } from "./src/server/db/mongoose";
-import { Router } from './src/server/config/routes';
-import { Config } from "./src/server/config/config"
+import { Mongoose } from "./db/mongoose";
+import { Router } from './config/routes';
+import { Config } from "./config/config"
 
 class App {
     constructor(port: number) {
@@ -13,7 +13,7 @@ class App {
 
         var app = express();
         app.use(bodyParser.json());
-        app.use(express.static(path.join(__dirname, "src/client")));
+        app.use(express.static(path.join(__dirname, "../client")));
         var router = new Router(app);
         router.route();
         new Mongoose();

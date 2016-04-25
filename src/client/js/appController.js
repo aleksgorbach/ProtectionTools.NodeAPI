@@ -1,24 +1,7 @@
-(function() {
-    angular.module("electricityApp").controller("AppController", function ($scope, electricity) {
-            $scope.model = electricity.getInitialBus();
-        
-            $scope.calc = function() {
-                electricity.calc($scope.model).then(function(data) {
-                    $scope.model.Amperage = data;
-                });
-            }
-
-            $scope.removeElement = function(elem) {
-                $scope.model = electricity.removeElement(elem, $scope.model);
-            }
-
-            $scope.addElement = function() {
-                $scope.model = electricity.addElement($scope.model);
-            }
-
-            $scope.canBeProcessed = function() {
-                return !amperageForm.$invalid && $scope.model.Elements.length > 0;
-            }
-        }
-    );
+(function(){
+   angular.module("ElectricityApp").controller("AppController", ["$scope", "$location", function($scope, $location){
+       $scope.engines = function(){
+           $location.path("/engines");
+       }
+   }]);
 }())
